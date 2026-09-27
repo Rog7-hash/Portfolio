@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Raghav Singh | Student Portfolio</title>
+
+    <link rel="stylesheet" href="Style1.css">
+    <style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #283044;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+/* ==============================
+   NAVIGATION
+   ============================== */
+
+.navbar {
+    width: 100%;
+    padding: 16px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e8e5f5;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    box-shadow: 0 2px 12px rgba(80, 70, 130, 0.06);
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #7357e8, #35b8d4);
+    color: white;
+
+    font-weight: bold;
+    font-size: 16px;
+
+    box-shadow: 0 5px 15px rgba(115, 87, 232, 0.25);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    color: #454b60;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.25s ease;
+}
+
+.navbar a:hover {
+    color: #7357e8;
+}
+
+/* ==============================
+   HERO SECTION
+   ============================== */
+
+.hero {
+    min-height: 88vh;
+
+    padding: 90px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+
+    background:
+        radial-gradient(circle at 85% 15%, #d7f7ff 0, transparent 25%),
+        radial-gradient(circle at 10% 85%, #e9ddff 0, transparent 28%),
+        linear-gradient(135deg, #faf8ff, #f2fbff);
+
+    overflow: hidden;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.small-text {
+    display: inline-block;
+
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+
+    color: #7357e8;
+
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 88px);
+
+    line-height: 0.95;
+
+    margin-bottom: 20px;
+
+    color: #22263a;
+}
+
+.hero h2 {
+    font-size: 25px;
+    font-weight: normal;
+
+    margin-bottom: 20px;
+
+    color: #4c61bd;
+}
+
+.hero-text > p:not(.small-text) {
+    max-width: 580px;
+
+    color: #697185;
+
+    font-size: 16px;
+}
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+.buttons {
+    display: flex;
+    gap: 13px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 13px 23px;
+
+    background: linear-gradient(
+        135deg,
+        #7357e8,
+        #4f9cf7
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    border: none;
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    box-shadow: 0 8px 20px rgba(92, 82, 210, 0.22);
+
+    transition: 0.25s ease;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 25px rgba(92, 82, 210, 0.3);
+}
+
+.button.second {
+    background: #ffffff;
+
+    color: #7357e8;
+
+    border: 1px solid #d9d2f6;
+
+    box-shadow: none;
+}
+
+.button.second:hover {
+    background: #f0ecff;
+}
+
+/* ==============================
+   HERO CARD
+   ============================== */
+
+.hero-card {
+    width: 290px;
+    min-width: 250px;
+
+    padding: 38px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid #e5e1f5;
+
+    border-radius: 20px;
+
+    box-shadow: 0 20px 45px rgba(84, 75, 140, 0.14);
+
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+.circle {
+    width: 135px;
+    height: 135px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #7357e8,
+        #35b8d4
+    );
+
+    color: white;
+
+    font-size: 42px;
+    font-weight: bold;
+
+    box-shadow: 0 12px 30px rgba(76, 146, 220, 0.25);
+}
+
+.hero-card p {
+    font-weight: bold;
+
+    font-size: 17px;
+
+    margin-bottom: 5px;
+
+    color: #30354a;
+}
+
+.hero-card span {
+    font-size: 13px;
+
+    color: #7b8294;
+}
+
+/* ==============================
+   ANIMATION
+   ============================== */
+
+@keyframes floatCard {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ==============================
+   GENERAL SECTIONS
+   ============================== */
+
+.section {
+    padding: 95px 8%;
+}
+
+.light-section {
+    background: #f8f9ff;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.section-heading p {
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+
+    color: #7357e8;
+
+    margin-bottom: 5px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+
+    color: #252a40;
+}
+
+/* ==============================
+   ABOUT
+   ============================== */
+
+.about-box {
+    max-width: 850px;
+
+    font-size: 18px;
+}
+
+.about-box p {
+    color: #687084;
+}
+
+.about-box p + p {
+    margin-top: 18px;
+}
+
+/* ==============================
+   SKILLS
+   ============================== */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e6ef;
+
+    border-radius: 13px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.skill-card::before {
+    content: "";
+
+    width: 100%;
+    height: 5px;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    background: #7357e8;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 30px rgba(70, 70, 110, 0.12);
+}
+
+.skill-card h3 {
+    margin-bottom: 8px;
+
+    color: #38448d;
+}
+
+.skill-card p {
+    color: #70778a;
+
+    font-size: 14px;
+}
+
+/* Different colorful skill borders */
+
+.skill-card:nth-child(1)::before {
+    background: #ff8066;
+}
+
+.skill-card:nth-child(2)::before {
+    background: #42a5f5;
+}
+
+.skill-card:nth-child(3)::before {
+    background: #7357e8;
+}
+
+.skill-card:nth-child(4)::before {
+    background: #35b89a;
+}
+
+.skill-card:nth-child(5)::before {
+    background: #f3b63f;
+}
+
+.skill-card:nth-child(6)::before {
+    background: #e96aa8;
+}
+
+/* ==============================
+   PROJECTS
+   ============================== */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.project-card {
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e6ef;
+
+    border-radius: 13px;
+
+    min-height: 330px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 35px rgba(70, 70, 110, 0.13);
+}
+
+.project-number {
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #7357e8;
+
+    margin-bottom: 35px;
+}
+
+.project-card h3 {
+    font-size: 24px;
+
+    margin-bottom: 12px;
+
+    color: #39447d;
+}
+
+.project-card p {
+    color: #697286;
+
+    font-size: 14px;
+}
+
+/* ==============================
+   PROJECT TAGS
+   ============================== */
+
+.tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin: 20px 0;
+}
+
+.tags span {
+    padding: 6px 10px;
+
+    background: #eeeaff;
+
+    color: #5d4bbd;
+
+    font-size: 12px;
+
+    border-radius: 20px;
+}
+
+/* ==============================
+   PROJECT LINKS
+   ============================== */
+
+.project-card a {
+    margin-top: auto;
+
+    color: #7357e8;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.2s ease;
+}
+
+.project-card a:hover {
+    color: #22a6c3;
+
+    padding-left: 5px;
+}
+
+/* ==============================
+   EDUCATION
+   ============================== */
+
+.education-box {
+    display: flex;
+
+    gap: 30px;
+
+    padding: 32px;
+
+    background: #ffffff;
+
+    border-left: 5px solid #7357e8;
+
+    border-radius: 0 13px 13px 0;
+
+    max-width: 850px;
+
+    box-shadow: 0 10px 25px rgba(50, 50, 100, 0.08);
+}
+
+.education-year {
+    min-width: 120px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #7357e8;
+}
+
+.education-box h3 {
+    margin-bottom: 8px;
+
+    color: #30364e;
+}
+
+.education-box p {
+    color: #697286;
+}
+
+/* ==============================
+   CONTACT
+   ============================== */
+
+.contact-section {
+    background:
+        linear-gradient(
+            135deg,
+            #7357e8,
+            #4f9cf7
+        );
+
+    color: white;
+}
+
+.contact-section .section-heading p {
+    color: #dfe7ff;
+}
+
+.contact-section .section-heading h2 {
+    color: white;
+}
+
+.contact-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+.contact-content > div:first-child {
+    max-width: 500px;
+}
+
+.contact-content h3 {
+    font-size: 29px;
+
+    margin-bottom: 12px;
+}
+
+.contact-content p {
+    color: #eef3ff;
+}
+
+.contact-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.contact-links a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+    transition: 0.25s ease;
+}
+
+.contact-links a:hover {
+    color: #d5fbff;
+
+    padding-left: 7px;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    padding: 25px 8%;
+
+    background: #f1efff;
+
+    color: #686d80;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    font-size: 13px;
+
+    border-top: 1px solid #e0dcf5;
+}
+
+/* ==============================
+   TABLET
+   ============================== */
+
+@media (max-width: 850px) {
+
+    .hero {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .hero-card {
+        align-self: center;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+}
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 14px 5%;
+    }
+
+    .navbar nav {
+        gap: 10px;
+
+        flex-wrap: wrap;
+
+        justify-content: flex-end;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .hero,
+    .section {
+        padding: 65px 5%;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero-card {
+        width: 100%;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-box {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}</style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">RS</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+
+            <div class="hero-text">
+
+                <p class="small-text">HELLO, I'M</p>
+
+                <h1>Raghav Singh</h1>
+
+                <h2>
+                    College Student &amp; Web Development Learner
+                </h2>
+
+                <p>
+                    I am a student at Scaler School of Technology,
+                    learning web development and building small
+                    projects while improving my HTML and CSS skills.
+                </p>
+
+                <div class="buttons">
+
+                    <a class="button" href="#projects">
+                        View My Work
+                    </a>
+
+                    <a class="button second" href="#contact">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="circle">
+                    RS
+                </div>
+
+                <p>2030 Batch</p>
+
+                <span>
+                    Learning • Building • Improving
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="section">
+
+            <div class="section-heading">
+
+                <p>01</p>
+
+                <h2>About Me</h2>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <p>
+                    I am Raghav Singh, a 2030 batch student at
+                    Scaler School of Technology. I am interested
+                    in computers, websites and learning how things
+                    work on the internet.
+                </p>
+
+                <p>
+                    Right now, I am focusing on the basics of HTML
+                    and CSS. I like learning by making small
+                    projects and then trying to improve them
+                    step by step.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Skills Section -->
+        <section id="skills" class="section light-section">
+
+            <div class="section-heading">
+
+                <p>02</p>
+
+                <h2>Skills</h2>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+
+                    <h3>HTML</h3>
+
+                    <p>
+                        Semantic structure, headings, links,
+                        forms and sections.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>CSS</h3>
+
+                    <p>
+                        Layouts, colors, spacing, cards,
+                        transitions and responsive design.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>Flexbox</h3>
+
+                    <p>
+                        Using rows, columns and alignment
+                        to arrange page elements.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>CSS Grid</h3>
+
+                    <p>
+                        Creating simple responsive grids
+                        for skills and projects.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>GitHub</h3>
+
+                    <p>
+                        Learning how to store and share
+                        coding projects.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>Learning Next</h3>
+
+                    <p>
+                        JavaScript and more web development
+                        concepts.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+
+            <div class="section-heading">
+
+                <p>03</p>
+
+                <h2>Projects</h2>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <!-- Project 1 -->
+                <article class="project-card">
+
+                    <div class="project-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Personal Portfolio
+                    </h3>
+
+                    <p>
+                        A simple responsive portfolio website
+                        made using HTML and CSS as a web
+                        development project.
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span>HTML</span>
+
+                        <span>CSS</span>
+
+                        <span>Flexbox</span>
+
+                    </div>
+
+
+                    <a href="#contact">
+                        Project Details →
+                    </a>
+
+                </article>
+
+
+                <!-- Project 2 -->
+                <article class="project-card">
+
+                    <div class="project-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Responsive Landing Page
+                    </h3>
+
+                    <p>
+                        A practice landing page where I
+                        experimented with CSS Grid, spacing,
+                        buttons and mobile layouts.
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span>HTML</span>
+
+                        <span>CSS Grid</span>
+
+                        <span>Responsive</span>
+
+                    </div>
+
+
+                    <a href="#contact">
+                        Project Details →
+                    </a>
+
+                </article>
+
+
+                <!-- Project 3 -->
+                <article class="project-card">
+
+                    <div class="project-number">
+                        03
+                    </div>
+
+                    <h3>
+                        CSS Animation Practice
+                    </h3>
+
+                    <p>
+                        A small experiment using CSS transitions,
+                        transforms and keyframes to make the page
+                        feel more interactive.
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span>CSS</span>
+
+                        <span>Animation</span>
+
+                        <span>Hover</span>
+
+                    </div>
+
+
+                    <a href="#contact">
+                        Project Details →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Education Section -->
+        <section id="education" class="section light-section">
+
+            <div class="section-heading">
+
+                <p>04</p>
+
+                <h2>Education</h2>
+
+            </div>
+
+
+            <div class="education-box">
+
+                <div class="education-year">
+                    2030 BATCH
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Scaler School of Technology
+                    </h3>
+
+                    <p>
+                        Currently learning programming,
+                        computer science and web development
+                        through projects and practical work.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+
+            <div class="section-heading">
+
+                <p>05</p>
+
+                <h2>Let's Connect</h2>
+
+            </div>
+
+
+            <div class="contact-content">
+
+
+                <div>
+
+                    <h3>
+                        Have a project idea?
+                    </h3>
+
+                    <p>
+                        Feel free to reach out. I am always
+                        interested in learning, building and
+                        discussing new ideas.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-links">
+
+                    <!-- Email -->
+                    <a href="mailto:singhraghav.theus2008@gmail.com">
+
+                        Email:
+                        singhraghav.theus2008@gmail.com
+
+                    </a>
+
+
+                    <!-- GitHub -->
+                    <a
+                        href="https://github.com/Rog7-hash"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        GitHub: Rog7-hash
+
+                    </a>
+
+
+                    <!-- LinkedIn -->
+                    <a
+                        href="https://www.linkedin.com/in/raghav-singh-6a7127429/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        LinkedIn: Raghav Singh
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Raghav Singh
+        </p>
+
+        <p>
+            Built with HTML &amp; CSS
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
